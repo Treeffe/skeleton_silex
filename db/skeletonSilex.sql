@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
     --
 
     CREATE TABLE `user` (
-      `idUser` int(11) NOT NULL,
+      `idUser` int(11) NOT NULL AUTO_INCREMENT,
       `prenomUser` text NOT NULL,
       `nomUser` text NOT NULL,
       `mailUser` text NOT NULL,
@@ -28,7 +28,8 @@ SET time_zone = "+00:00";
       `loginUser` text NOT NULL,
       `mdpUser` text NOT NULL,
       `saltSys` text NOT NULL,
-        `role` varchar(255) NOT NULL
+        `role` varchar(255) NOT NULL,
+        primary key(idUser)
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-    
-    INSERT INTO visiteur VALUES (1, 'thibaut', 'cornado',  'cornado@hotmail.fr', 'X', 'Lyon', 'treef', 'YRKBx8oeQ2sLBrEqjJeqc8UwC9HPp+Ed6dhCeeHPQJ9vY4vbMepUbS14/rE6njWr4RZd4E+tU4pcOMI0h8Z6UA==', 'mnPEaJNz6,rUPbAYGg6$UXt', 'ROLE_ADMIN')
+
+    INSERT INTO visiteur VALUES (0, 'thibaut', 'cornado',  'cornado@hotmail.fr', 'X', 'Lyon', 'treef', 'YRKBx8oeQ2sLBrEqjJeqc8UwC9HPp+Ed6dhCeeHPQJ9vY4vbMepUbS14/rE6njWr4RZd4E+tU4pcOMI0h8Z6UA==', 'mnPEaJNz6,rUPbAYGg6$UXt', 'ROLE_ADMIN')
